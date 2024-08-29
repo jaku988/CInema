@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController" prefWidth="800" prefHeight="600">
+    <HBox spacing="20">
+        <VBox fx:id="leftPanel" spacing="10">
+            <Label text="Sale Kinowe" />
+            <Label text="Sale Małe" />
+            <Button userData="1" text="Sala 1" onAction="#loadScreenings" />
+            <Button userData="2" text="Sala 2" onAction="#loadScreenings" />
+            <Button userData="3" text="Sala 3" onAction="#loadScreenings" />
+            <Button userData="4" text="Sala 4" onAction="#loadScreenings" />
+            <Label text="Sale Średnie" />
+            <Button userData="5" text="Sala 5" onAction="#loadScreenings" />
+            <Button userData="6" text="Sala 6" onAction="#loadScreenings" />
+            <Button userData="7" text="Sala 7" onAction="#loadScreenings" />
+            <Label text="Sale Duże" />
+            <Button userData="8" text="Sala 8" onAction="#loadScreenings" />
+        </VBox>
+        <VBox fx:id="rightPanel" spacing="10" alignment="TOP_RIGHT">
+            <VBox fx:id="userPanel" spacing="5" alignment="TOP_RIGHT">
+                <!-- Zalogowany użytkownik -->
+                <Button text="Zaloguj się" onAction="#showLogin"/>
+                <Button text="Zarejestruj się" onAction="#showRegister"/>
+            </VBox>
+            <VBox fx:id="reservationList" spacing="5">
+                <Label text="Twoje rezerwacje:" />
+                <ListView fx:id="userReservations" VBox.vgrow="ALWAYS" prefWidth="400"/>
+                <Button text="Usuń zaznaczoną rezerwację" onAction="#deleteSelectedReservation"/>
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SeatController" spacing="10" alignment="CENTER">
+    <Label text="Wybór miejsc" />
+    <GridPane fx:id="seatGrid" hgap="5" vgap="5" />
+    <Button fx:id="reserveButton" text="Rezerwuj" onAction="#reserveSeats" />
+</VBox>
